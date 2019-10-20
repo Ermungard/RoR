@@ -1,0 +1,7 @@
+.content.row	
+	%h2
+		= @tag.name
+	- if @tag.articles.empty?
+		%h4 Статей нет
+	- else
+		= render @tag.articles.order(id: :desc)

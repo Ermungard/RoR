@@ -1,0 +1,25 @@
+.content.row		
+	= render(:partial => "tags/tags_cloud")
+	- @articles.order(id: :desc).each do |article|
+		.post.col
+			.title.row
+				%h4.col.m8.offset-m1.s12
+					= link_to article.title, article_path(article)
+				.col.m4.s12.offset-m1
+					%span
+						= User.find(article.author_id).email
+				.tags_articles.col.m10.s12.offset-m1
+					= raw article.tags.map(&:name).map{ |t| link_to t, tag_path(t)}.join(' ')
+			.text.row
+				.links.col.m10.s12.offset-m1
+					.date.right
+						%span
+							= article.created_at.to_date.strftime("%d.%m.%Y")
+					.left
+						= link_to 'Читать', article_path(article)
+						- if user_signed_in? && article.author_id == current_user.id
+							|
+							= link_to 'Удалить', article_path(article), method: :delete, data: { confirm: 'Вы уверены?'}
+							|
+							= link_to 'Изменить', edit_article_path(article)
+	= will_paginate @articles, :class => 'col s12'

@@ -1,0 +1,31 @@
+.content.row
+	.article.col.s12
+		%h3.center
+			= @article.title
+		.body.row
+			.col.m10.s12.offset-m1
+				= @article.body.html_safe
+	.author.col.s12
+		%p.col.s10.offset-m1
+			Автор(ы):
+			= @article.author
+		%h4
+			Коментарии
+		- @article.comments.each do |comment| 
+			%h5
+				= User.find(comment.user_id).email
+			%p
+				= comment.body
+			- if user_signed_in? && comment.user_id == current_user.id
+				%p
+					= link_to 'Удалить коментарий', [comment.article, comment], method: :delete
+		- if user_signed_in?
+			%h4
+				Добавить коментарий:
+			= form_for([@article, @article.comments.build]) do |f| 
+				.input-field
+					= f.label :body
+					= f.text_area :body, :class => 'materialize-textarea'
+				%p
+					= f.submit 'Добавить коментарий', :class => 'btn'
+	= link_to '< Назад', root_path

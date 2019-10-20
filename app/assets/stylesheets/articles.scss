@@ -1,0 +1,351 @@
+// Place all the styles related to the Articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.notice, .alert {
+	margin: 0;
+}
+html, body {
+
+	background-color: #f1f1f1;
+
+	.editor {
+		min-height: 300px;
+	}
+
+	header {
+
+		margin-top: 20px;
+	
+		margin-bottom: 0;
+
+			nav {
+				
+				background-color: rgba(0, 0, 0, 0);
+				box-shadow: none;
+
+				.nav-wrapper{
+					
+					font-weight: 300;
+
+					.rgups {
+						width: 84px;
+						height: 100%;
+						padding: 0 15px 0 15px;
+						font-size: 2.5rem;
+						background-image: image-url("RGUPS.png");
+						background-repeat: no-repeat;
+						background-position: center;
+						background-size: cover;
+					}
+					
+					.cicd {
+						margin-left: 100px;
+						width: 130px;
+						height: 100%;
+						padding: 0 15px 0 15px;
+						font-size: 2.5rem;
+						background-image: image-url("cicd.png");
+						background-repeat: no-repeat;
+						background-position: center;
+						background-size: cover;
+					}
+
+					a {
+						color: black;
+						font-size: 1.5rem;
+					}
+
+					.auth {
+						display: -webkit-inline-box;
+					}
+
+				}
+
+				a {
+					color: black;
+				}
+			}
+		}
+
+	main {
+		
+		.content {
+		
+			// padding-top: 1rem;
+
+			form p:last-child {
+				margin-bottom: 10px;
+
+				input {
+					background-color: gray;
+				}
+			}
+
+				.new-article {
+
+					cursor: pointer;
+
+					a {
+						// margin: 1rem;
+						background-color: #fff;
+						color: #000;
+						-webkit-box-shadow: 0 2px 3px 1px rgba(1,1,1,0.1);
+						box-shadow: 0 2px 3px 1px rgba(1,1,1,0.1);
+						text-transform: none;
+						border: 1px solid rgba(0, 0, 0, 0.07);
+						border-radius: 0;
+						
+						&:hover{
+							i {
+								-moz-transform: rotate(225deg);
+								-webkit-transform: rotate(225deg);
+								-o-transform: rotate(225deg);
+								-ms-transform: rotate(225deg);
+								transform: rotate(225deg);
+							}
+						}
+
+						i {
+							font-size: 2rem;
+							-webkit-transition: -webkit-transform .5s ease-in-out;
+	          				transition: transform .5s ease-in-out;
+						}
+					}
+				}
+			}
+	}
+}
+.container {
+	width: 80%;
+}
+.article {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	font-size: 18px;
+	margin-bottom: 1.5rem;
+	-webkit-box-shadow: 0 2px 3px 1px rgba(1,1,1,0.1);
+	box-shadow: 0 2px 3px 1px rgba(1,1,1,0.1);
+	background-color: #fff;
+	font-weight: 300;
+
+	img {
+		width: 100%;
+		height: 100%;
+	}
+
+	h3 {
+		font-size: 3.75rem;
+		font-weight: 100;
+
+	}
+
+	.body {
+		text-align: justify;
+		margin-bottom: 30px;
+
+		h1 {
+			font-size: 2.2rem;
+		}
+	}
+}
+.tags_articles {
+	a {
+		font-weight: 100;
+		color: #979797;
+	}
+}
+.tag1 {
+	font-size: 1.0rem
+}
+.tag2 {
+	font-size: 1.2rem
+}
+.tag3 {
+	font-size: 1.4rem
+}
+.tag4 {
+	font-size: 1.6rem
+}
+.tag5 {
+	font-size: 1.8rem	
+}
+.tag_cloud {
+	width: 70%;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	font-size: 18px;
+	margin-bottom: 1.5rem;
+	-webkit-box-shadow: 0 2px 3px 1px rgba(1,1,1,0.1);
+	box-shadow: 0 2px 3px 1px rgba(1,1,1,0.1);
+	background-color: #fff;
+	font-weight: 300;
+    
+    .tags {
+        margin-bottom: 10px;
+    }
+    
+	.title {
+		margin-bottom: 0;
+	}
+
+	h4 {
+		font-weight: 100;
+		margin-bottom: 0;
+	}
+}
+.author {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	font-size: 18px;
+	margin-bottom: 1.5rem;
+	-webkit-box-shadow: 0 2px 3px 1px rgba(1, 1, 1, 0.1);
+	box-shadow: 0 2px 3px 1px rgba(1, 1, 1, 0.1);
+	background-color: #fff;
+	font-weight: 300;
+}
+.form {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	font-size: 18px;
+	-webkit-box-shadow: 0 2px 3px 1px rgba(1,1,1,0.1);
+	box-shadow: 0 2px 3px 1px rgba(1,1,1,0.1);
+	background-color: #fff;
+	font-weight: 300;
+	padding-bottom: 0.5rem !important;
+
+	.collapsible-header {
+		justify-content: space-between;
+	}
+
+	.collapsible-header i {
+		font-size: 2rem;
+		margin: 0;
+	}
+}
+.post{
+	width: 70%;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	font-size: 18px;
+	margin-bottom: 3rem;
+	-webkit-box-shadow: 0 2px 3px 1px rgba(1,1,1,0.1);
+	box-shadow: 0 2px 3px 1px rgba(1,1,1,0.1);
+	background-color: #fff;
+
+	.img {
+		// opacity: 0;
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.date {
+		// padding: 1rem 0 0 1rem;
+	}
+
+	h4 {
+		font-size: 3.75rem;
+		padding: 0 5rem 0 5rem;
+		font-weight: 100;
+		margin-bottom: 0;
+	}
+	
+	.text {
+		// opacity: 0;
+		margin-bottom: 0;
+		.post-text {
+			overflow: hidden;
+			// height: 400px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			font-size: 1.5rem;
+			font-weight: 300;
+			text-align: justify;
+
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+	.links {
+		margin-top: 20px;
+	}
+}
+@media (max-width: 767px) {
+	.post h4 {
+		font-size: 3rem;
+		padding: 0;
+	}
+}
+.right_table {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	font-size: 18px;
+	-webkit-box-shadow: 0 2px 3px 1px rgba(1,1,1,0.1);
+	box-shadow: 0 2px 3px 1px rgba(1,1,1,0.1);
+	background-color: #fff;
+	font-weight: 300;
+	padding: 0 !important;
+	margin-bottom: 3rem;;
+
+	li {
+		list-style-type: none;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		min-height: 60px;
+		display: flex;
+		width: 100%;
+		height: 100%;
+		align-items: center;
+		padding: 5px 10px 5px 10px;
+
+		a {
+			display: flex;
+			width: 100%;
+			height: 100%;
+			justify-content: center;
+			align-items: center;
+			font-size: 16px;
+			line-height: 20px;
+		}
+
+	}
+
+	.email {
+		word-wrap: break-word;
+	}
+}
+@media (max-width: 767px) {
+	.container {
+		width: 90%;
+	}
+	.right_table {
+		display: none;
+	}
+	.post {
+		width: 100% !important;
+		margin-bottom: 1.5rem;
+	}
+	.post h4 {
+		font-size: 2rem;
+	}
+	.article h4 {
+		font-size: 2rem;
+	}
+	.rgups {
+		width: 74px !important;
+		transform: translateX(-100%) !important;
+	}
+	.cicd {
+		margin: 0 !important;
+		transform: translateX(0) !important;
+	}
+	.article {
+		.body {
+
+			h1 {
+				font-size: 1.6rem;
+			}
+		}
+	}
+	.tag_cloud {
+		width: 100% !important;
+	}
+}

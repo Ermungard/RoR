@@ -1,0 +1,18 @@
+%header.row
+	%nav
+		.nav-wrapper
+			%ul.hide-on-med-and-down
+				%li
+					= link_to 'Главная', root_path, :class => 'hover'
+				%li	
+					- if user_signed_in?
+						= link_to 'Добавить статью', new_article_path(@new), :class => 'hover'
+				%li	
+					- if user_signed_in?
+						= link_to 'Мои статьи', draft_path, :class => 'hover'
+				%li.auth
+					- if user_signed_in?
+						= link_to 'Выход', destroy_user_session_path, method: :delete, :class => 'hover'
+					- else
+						= link_to 'Вход', new_user_session_path, :class => 'hover'
+						= link_to 'Регистрация', new_user_registration_path, :class => 'hover'

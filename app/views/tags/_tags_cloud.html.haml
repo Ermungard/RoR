@@ -1,0 +1,7 @@
+.tag_cloud.col.s3.right
+	.row.title
+		%h4.col.m12.offset-m1.s12
+			Теги
+	.tags.col.m10.offset-m1.s12
+		- tag_cloud(Tag.counts, %w{tag1 tag2 tag3 tag4 tag5}) do |tag, css_class|
+			= link_to tag.name, tag_path(tag.name), class: css_class

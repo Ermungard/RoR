@@ -1,0 +1,18 @@
+=form_for [@article], html: { multipart: true } do |f|
+	.input-field
+		=f.label 'Название статьи'
+		=f.text_field :title
+	.input-field
+		=f.label 'Автор(ы) статьи'
+		=f.text_field :author
+	.input-field
+		%em
+			Статья
+		=f.trix_editor :body, :class => 'editor'
+	.input-field
+		=f.label 'Теги статьи'
+		=f.text_field :all_tags
+
+	.input-feild.links
+		=f.submit 'Опубликовать', :class => 'btn left'
+		=f.submit 'Сохранить в черновик', :class => 'btn right', :name => 'draft'

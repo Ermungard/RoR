@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /users
+
+User-agent: Googlebot
+Disallow: /users
+
+Host: crik.rgups.ru
+Sitemap: http://crik.rgups.ru/sitemap.xml

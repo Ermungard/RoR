@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title><%= @meta_title ? @meta_title : 'Блог' %></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<%= stylesheet_link_tag "https://fonts.googleapis.com/icon?family=Material+Icons" %>
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+		<%= csrf_meta_tags %>
+	</head>
+
+	<body>
+		<div class="container">
+			<p class="notice"><%= notice %></p>
+	    	<p class="alert"><%= alert %></p>
+	    	<%= render(:partial => "partials/header") %>
+			<div class="col s12">
+				<%= yield %>
+			</div>
+		</div>
+	</body>
+</html>
